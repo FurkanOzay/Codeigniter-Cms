@@ -76,55 +76,55 @@
                         <li><a href="#"><span class="menu-text">Dosya Galerisi</span></a></li>
                     </ul>
                 </li>
-                <li class="has-submenu">
+                <li>
                     <a href="javascript:void(0)" class="submenu-toggle">
                         <i class="menu-icon zmdi zmdi-layers zmdi-hc-lg"></i>
                         <span class="menu-text">Slider</span>
                     </a>
                 </li>
-                <li class="has-submenu">
+                <li>
                     <a href="javascript:void(0)" class="submenu-toggle">
                         <i class="menu-icon fa fa-cubes"></i>
                         <span class="menu-text">Ürünler</span>
                     </a>
                 </li>
-                <li class="has-submenu">
+                <li>
                     <a href="javascript:void(0)" class="submenu-toggle">
                         <i class="menu-icon fa fa-newspaper-o"></i>
                         <span class="menu-text">Haberler</span>
                     </a>
                 </li>
-                <li class="has-submenu">
+                <li>
                     <a href="javascript:void(0)" class="submenu-toggle">
                         <i class="menu-icon fa fa-calendar"></i>
                         <span class="menu-text">Eğitimler</span>
                     </a>
                 </li>
-                <li class="has-submenu">
+                <li>
                     <a href="javascript:void(0)" class="submenu-toggle">
                         <i class="menu-icon zmdi zmdi-check zmdi-hc-lg"></i>
                         <span class="menu-text">Referanslar</span>
                     </a>
                 </li>
-                <li class="has-submenu">
+                <li>
                     <a href="javascript:void(0)" class="submenu-toggle">
                         <i class="menu-icon menu-icon zmdi zmdi-puzzle-piece zmdi-hc-lg"></i>
                         <span class="menu-text">Markalar</span>
                     </a>
                 </li>
-                <li class="has-submenu">
+                <li>
                     <a href="javascript:void(0)" class="submenu-toggle">
                         <i class="menu-icon menu-icon fa fa-user-secret"></i>
                         <span class="menu-text">Kullanıcılar</span>
                     </a>
                 </li>
-                <li class="has-submenu">
+                <li>
                     <a href="javascript:void(0)" class="submenu-toggle">
                         <i class="menu-icon menu-icon fa fa-user"></i>
                         <span class="menu-text">Aboneler</span>
                     </a>
                 </li>
-                <li class="has-submenu">
+                <li>
                     <a href="javascript:void(0)" class="submenu-toggle">
                         <i class="menu-icon menu-icon zmdi zmdi-lamp zmdi-hc-lg"></i>
                         <span class="menu-text">Popup Hizmeti</span>
