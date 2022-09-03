@@ -1,9 +1,18 @@
 <div class="row">
     <div class="col-md-12">
-        <h4 class="m-b-lg">Ürün Listesi</h4>
+        <h4 class="m-b-lg">
+            Ürün Listesi
+            <a href="#" class="btn btn-outline btn-inverse btn-xs pull-right">
+                <i class="fa fa-plus"></i>
+                Yeni Ekle
+            </a>
+        </h4>
     </div><!-- END column -->
     <div class="col-md-12">
         <div class="widget p-lg">
+            <div class="alert alert-info text-center">
+                <p>Burada herhangi bir veri bulunmamaktadır. Eklemek için <a href="#">tıklayınız.</a></p>
+            </div>
             <!-- .table-striped: 1'er sütun aralıklarla renklendirme yapar -->
             <!-- .table-hover: Her sütunun üstüne gelince renk değiştirmesini sağlar -->
             <table class="table table-hover table-striped">
@@ -21,7 +30,15 @@
                     <td>monitor-askisi</td>
                     <td>Monitör</td>
                     <td>360 derece kullanılabilen monitör askısıdır.</td>
-                    <td>Null</td>
+                    <td>
+                        <input
+                                type="checkbox"
+                                data-switchery
+                                data-color="#10c469"
+                                data-size="small"
+                                checked
+                        >
+                    </td>
                     <td>
                         <a href="#" class="btn btn-xs btn-danger btn-outline">
                             <i class="fa fa-trash"></i>
