@@ -2,7 +2,8 @@
     <div class="col-md-12">
         <h4 class="m-b-lg">
             Ürün Listesi
-            <a href="#" class="btn btn-outline btn-inverse btn-xs pull-right">
+            <!-- a etiketine product controllerı'nın altındaki new_form isimlimethodu çağırması komutunu veriyoruz. -->
+            <a href="<?php echo base_url("product/new_form"); ?>" class="btn btn-outline btn-inverse btn-xs pull-right">
                 <i class="fa fa-plus"></i>
                 Yeni Ekle
             </a>
@@ -13,7 +14,7 @@
             <!-- empty ile değişkenin boş olup olmaadığını kontrol ediyoruz -->
             <?php if(empty($items)) { ?>
             <div class="alert alert-info text-center">
-                <p>Burada herhangi bir veri bulunmamaktadır. Eklemek için <a href="#">tıklayınız.</a></p>
+                <p>Burada herhangi bir veri bulunmamaktadır. Eklemek için <a href="<?php echo base_url("product/new_form"); ?>">tıklayınız.</a></p>
             </div>
             <?php } else { ?>
             <!-- .table-striped: 1'er sütun aralıklarla renklendirme yapar -->
@@ -35,12 +36,12 @@
                     <td><?php echo $item->title; ?></td>
                     <td><?php echo $item->description; ?></td>
                     <td>
+                        <!-- isActive 1 ise toggle seçili 0 ise seçilmemiş görünmesi için koşul oluşturuyoruz. -->
                         <input
                                 type="checkbox"
                                 data-switchery
                                 data-color="#10c469"
                                 data-size="small"
-                                <!-- isActive 1 ise toggle seçili 0 ise seçilmemiş görünmesi için koşul oluşturuyoruz. -->
                                 <?php echo ($item->isActive) ? "checked" : ""; ?>
                         >
                     </td>
