@@ -53,6 +53,7 @@
         <div class="menubar-scroll-inner">
             <ul class="app-menu">
                 <li>
+                    <!-- Ana dizine gitmesi için link verildi. -->
                     <a href="<?php echo base_url("/"); ?>">
                         <i class="menu-icon zmdi zmdi-view-dashboard zmdi-hc-lg"></i>
                         <span class="menu-text">Dashboard</span>
@@ -83,6 +84,7 @@
                     </a>
                 </li>
                 <li>
+                    <!-- Ürünler dizinine gitmesi için link verildi. -->
                     <a href="<?php echo base_url("product"); ?>">
                         <i class="menu-icon fa fa-cubes"></i>
                         <span class="menu-text">Ürünler</span>

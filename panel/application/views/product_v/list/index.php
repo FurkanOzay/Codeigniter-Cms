@@ -22,7 +22,7 @@
     <main id="app-main" class="app-main">
         <div class="wrap">
             <section class="app-content">
-
+                <!-- Controllerda tanımlanan viewler burda belirtiliyor. Son olarak content dosyasındaki içerik çekiliyor. -->
                 <?php $this->load->view("{$viewFolder}/{$subViewFolder}/content"); ?>
 
             </section><!-- #dash-content -->
