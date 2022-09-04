@@ -50,7 +50,7 @@
                             <i class="fa fa-trash"></i>
                             Sil
                         </a>
-                        <a href="#" class="btn btn-xs btn-inverse btn-outline rounded">
+                        <a href="<?php echo base_url("product/update_form/$item->id"); ?>" class="btn btn-xs btn-inverse btn-outline rounded">
                             <i class="fa fa-pencil-square-o"></i>
                             Düzenle
                         </a>
