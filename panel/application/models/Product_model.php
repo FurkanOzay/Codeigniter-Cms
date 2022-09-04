@@ -25,4 +25,10 @@ class Product_model extends CI_Model {
         return $this->db->insert($this->tableName, $data);
     }
 
+    /* Veritabanına güncelleme yapacak olan metot */
+    public function update($where = array() , $data = array()){
+
+        return $this->db->where($where)->update($this->tableName, $data);
+    }
+
 }

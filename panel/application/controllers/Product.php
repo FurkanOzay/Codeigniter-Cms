@@ -42,7 +42,6 @@ class Product extends  CI_Controller {
         $this->load->view("{$viewData->viewFolder}/{$viewData->subViewFolder}/index", $viewData);
 
     }
-
     public function save(){
 
         //Form verilerinin kontrol edilmesini, girilmesini, doğru mu girildiğini ve aynı verinin girilip
@@ -89,9 +88,6 @@ class Product extends  CI_Controller {
             $this->load->view("{$viewData->viewFolder}/{$viewData->subViewFolder}/index", $viewData);
         }
     }
-
-
-
     public function update_form($id){
         $viewData = new stdClass();
 
@@ -110,5 +106,58 @@ class Product extends  CI_Controller {
         $this->load->view("{$viewData->viewFolder}/{$viewData->subViewFolder}/index", $viewData);
     }
 
+    public function update($id){
+
+        //Form verilerinin kontrol edilmesini, girilmesini, doğru mu girildiğini ve aynı verinin girilip
+        // girilmediğini kontrol etmek için form-validation kütüphanesini ekliyoruz.
+        $this->load->library("form_validation");
+        //Kurallar yazılır
+        //set_rules içine default 3 kural alır.
+        $this->form_validation->set_rules("title", "Başlık","required|trim");
+        //set_message içerisine bir array alır.
+        $this->form_validation->set_message(
+            array(
+                //field Başlık alanı kısmını dinamik çekmek için tanımlanmıştır.
+                "required" => "<b>{field}</b> alanı boş geçilemez."
+            )
+        );
+
+        //Form Validation Çalıştırlır. Bu durum true ya da false değer döner.
+        $validate = $this->form_validation->run();
+        if($validate){
+
+            $update = $this->product_model->update(
+                array(
+                  "id"              =>$id
+                ),
+                array(
+                    "title"         => $this->input->post("title"),
+                    "description"   => $this->input->post("description"),
+                    "url"           => convertToSeo($this->input->post("title")),
+                )
+            );
+
+            if($update){
+                redirect(base_url("product"));
+            }else{
+                redirect(base_url("product"));
+            }
+
+        }else{
+
+            $viewData = new stdClass();
+            $item = $this->product_model->get(
+                array(
+                    "id" => $id
+                )
+            );
+            $viewData->viewFolder = $this->viewFolder;
+            $viewData->subViewFolder = "add";
+            $viewData->form_error = "";
+            $viewData->item = $item;
+
+            $this->load->view("{$viewData->viewFolder}/{$viewData->subViewFolder}/index", $viewData);
+        }
+    }
 
 }
