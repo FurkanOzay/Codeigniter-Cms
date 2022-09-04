@@ -56,7 +56,7 @@ class Product extends  CI_Controller {
         $this->form_validation->set_message(
             array(
                 //field Başlık alanı kısmını dinamik çekmek için tanımlanmıştır.
-                "required" => "<b>{field}</b> alanı girilmelidir."
+                "required" => "<b>{field}</b> alanı boş geçilemez."
             )
         );
 
@@ -65,8 +65,12 @@ class Product extends  CI_Controller {
         if($validate){
             echo "Kayıt Başarılı";
         }else{
-            echo validation_errors();
-            //echo "Birşeyler ters gitti";
+
+            $viewData = new stdClass();
+            $viewData->viewFolder = $this->viewFolder;
+            $viewData->subViewFolder = "add";
+            $viewData->form_error = "";
+            $this->load->view("{$viewData->viewFolder}/{$viewData->subViewFolder}/index", $viewData);
         }
     }
 
