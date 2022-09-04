@@ -63,7 +63,24 @@ class Product extends  CI_Controller {
         //Form Validation Çalıştırlır. Bu durum true ya da false değer döner.
         $validate = $this->form_validation->run();
         if($validate){
-            echo "Kayıt Başarılı";
+
+            $insert = $this->product_model->add(
+                array(
+                    "title"         => $this->input->post("title"),
+                    "description"   => $this->input->post("description"),
+                    "url"           => "test",
+                    "rank"          => 0,
+                    "isActive"      => 1,
+                    "createdAt"     =>date("Y-m-d H:i:s")
+                )
+            );
+
+            if($insert){
+                echo "Kayıt işlemi başarılıdır";
+            }else{
+                echo "İşlem başarısız";
+            }
+
         }else{
 
             $viewData = new stdClass();
